@@ -15,6 +15,15 @@ class BoardTestCase(unittest.TestCase):
         expected_result = ('+', '+', '-', '+', '-', '-', '-', '+')
         self.assertCountEqual(result, expected_result)
 
+    def test_board_generates_correct_new_board(self):
+        result = self.TestBoard.generate_new_board()
+        expected_result = [['+', '-', '-', '+'],
+                            ['+', '-', '-', '+'],
+                            ['+', '-', '+', '+'],
+                            ['-', '-', '-', '-']
+        ]
+
+
 class CellTestCase(unittest.TestCase):
     def setUp(self):
         self.cell_1 = Cell('+', ('-', '+', '+'))
