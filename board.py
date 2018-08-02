@@ -44,8 +44,9 @@ class Board:
                 elif cell_index == len(cell_row) - 1:
                     if cell_row_index == 0:
                         cell.neighbour_states = (
-                            self.list_of_cell_state_rows[0][cell_index-1], self.list_of_cell_state_rows[1][cell_index],
-                            self.list_of_cell_state_rows[1],[cell_index-1]
+                            self.list_of_cell_state_rows[0][cell_index-1],
+                            self.list_of_cell_state_rows[1][cell_index],
+                            self.list_of_cell_state_rows[1][cell_index-1]
                             )
                     elif cell_row_index != len(self.list_of_cell_state_rows) - 1:
                         cell.neighbour_states = (
@@ -65,9 +66,10 @@ class Board:
                     if cell_row_index == 0:
                         cell.neighbour_states = (
                             self.list_of_cell_state_rows[0][cell_index-1],
-                            self.list_of_cell_state_rows[0][cell_index+1], self.list_of_cell_state_rows[1][cell_index],
+                            self.list_of_cell_state_rows[0][cell_index+1],
+                            self.list_of_cell_state_rows[1][cell_index],
                             self.list_of_cell_state_rows[1][cell_index+1],
-                            self.list_of_cell_state_rows[1],[cell_index-1],
+                            self.list_of_cell_state_rows[1][cell_index-1],
                             )
                     elif cell_row_index != len(self.list_of_cell_state_rows) - 1:
                         cell.neighbour_states = (
@@ -83,9 +85,10 @@ class Board:
                     else:
                         cell.neighbour_states = (
                             self.list_of_cell_state_rows[cell_row_index-1][cell_index-1],
-                            self.list_of_cell_state_rows[cell_row_index-1][cell_index+1], self.list_of_cell_state_rows[cell_row_index-1][cell_index],
+                            self.list_of_cell_state_rows[cell_row_index-1][cell_index+1],
+                            self.list_of_cell_state_rows[cell_row_index-1][cell_index],
                             self.list_of_cell_state_rows[cell_row_index][cell_index+1],
-                            self.list_of_cell_state_rows[cell_row_index],[cell_index-1]
+                            self.list_of_cell_state_rows[cell_row_index][cell_index-1]
                             )
 
     def set_new_states(self):
