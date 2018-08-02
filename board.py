@@ -2,6 +2,7 @@ class Board:
 
     def __init__(self, list_of_cells):
         self.cells = []
+        self.dimensions = []
 
     def set_neighbours(self):
         pass
