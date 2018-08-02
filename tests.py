@@ -1,5 +1,5 @@
 import unittest
-from board.py import Board
+from board import Board
 
 class TestCase(unittest.TestCase):
     def setUp(self):
