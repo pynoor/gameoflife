@@ -4,24 +4,24 @@ from cell import Cell
 
 class BoardTestCase(unittest.TestCase):
     def setUp(self):
-        self.TestBoard_1 = Board([['+', '-', '-', '+'],
+        self.FirstBoard = Board([['+', '-', '-', '+'],
                             ['+', '+', '+', '+'],
                             ['-', '-', '+', '-'],
                             ['+', '-', '-', '-']])
-        self.TestBoard_2 = Board([['-', '-', '+', '-'],
+        self.SecondBoard = Board([['-', '-', '+', '-'],
                             ['-','+', '+', '+'],
                             ['+', '-', '+', '-']
                             ])
 
 
     def test_board_sets_correct_neighbours(self):
-        self.TestBoard_1.set_neighbours()
-        result = self.TestBoard_1.cells[1][2].neighbour_states
+        self.FirstBoard.set_neighbours()
+        result = self.FirstBoard.cells[1][2].neighbour_states
         expected_result = ('+', '+', '-', '+', '-', '-', '-', '+')
         self.assertCountEqual(result, expected_result)
 
     def test_board_generates_correct_new_board(self):
-        result = self.TestBoard_2.generate_new_board()
+        result = self.SecondBoard.generate_new_board()
         expected_result = [['-', '+', '+', '+'],
                             ['-', '-', '-', '+'],
                             ['-', '-', '+', '+'],
