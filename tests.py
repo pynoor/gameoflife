@@ -28,6 +28,5 @@ class CellTestCase(unittest.TestCase):
         self.cell_2.update_state()
         self.assertEqual(self.cell_2.state, '+')
 
-
 if __name__ == '__main__':
     unittest.main()
