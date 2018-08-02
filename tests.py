@@ -22,6 +22,7 @@ class BoardTestCase(unittest.TestCase):
                             ['+', '-', '+', '+'],
                             ['-', '-', '-', '-']
         ]
+        self.assertEqual(result, expected_result)
 
 
 class CellTestCase(unittest.TestCase):
