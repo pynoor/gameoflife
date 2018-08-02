@@ -1,5 +1,6 @@
 import unittest
 from board import Board
+from cell import Cell
 
 class BoardTestCase(unittest.TestCase):
     def setUp(self):
