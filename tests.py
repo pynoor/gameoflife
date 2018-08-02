@@ -11,9 +11,9 @@ class BoardTestCase(unittest.TestCase):
 
     def test_board_sets_correct_neighbours(self):
         self.TestBoard.set_neighbours()
-        result = self.TestBoard.cells[0][0].neighbour_states
-        expected_result = ('-', '+', '+')
-        self.assertEqual(result, expected_result)
+        result = self.TestBoard.cells[1][2].neighbour_states
+        expected_result = ('+', '+', '-', '+', '-', '-', '-', '+')
+        self.assertCountEqual(result, expected_result)
 
 class CellTestCase(unittest.TestCase):
     def setUp(self):
