@@ -3,7 +3,7 @@ from board import Board
 
 class BoardTestCase(unittest.TestCase):
     def setUp(self):
-        self.TestBoard = Board(['+', '-', '-', '+',
+        self.TestBoard = Board([4, 4], ['+', '-', '-', '+',
                             '+', '+', '+', '+',
                             '-', '-', '+', '-',
                             '+', '-', '-', '-'])
@@ -13,3 +13,5 @@ class BoardTestCase(unittest.TestCase):
          set([neighbour.state for neighbour in self.TestBoard.cells[3].neighbours])]
         expected_result = [('-', '+', '+'), ('-', '+', '+')]
         self.assertEqual(result, expected_result)
+if __name__ == '__main__':
+    unittest.main()
