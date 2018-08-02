@@ -1,7 +1,7 @@
 import unittest
 from board import Board
 
-class TestCase(unittest.TestCase):
+class BoardTestCase(unittest.TestCase):
     def setUp(self):
         self.TestBoard = Board(['+', '-', '-', '+',
                             '+', '+', '+', '+',
