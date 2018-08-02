@@ -89,7 +89,17 @@ class Board:
                             )
 
     def set_new_states(self):
-        pass
+        for cell_row in self.cells:
+            for cell in cell_row:
+                cell.update_state()
 
     def generate_new_board(self):
-        pass
+        self.set_neighbours()
+        self.set_new_states()
+        new_board = []
+        for cell_row in self.cells:
+            new_cell_state_row = []
+            for cell in cell_row:
+                new_cell_state_row.append(cell.next_state)
+            new_board.append(new_cell_state_row)
+        return new_board
