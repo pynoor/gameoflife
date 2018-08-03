@@ -16,7 +16,10 @@ class BoardTestCase(unittest.TestCase):
 
     def test_board_sets_neighbours(self):
         # Exercise
-        self.first_board.set_neighbours()
+        '''
+        Essentially, what we're testing here is wether or not the command 'self.first_board.set_neighbours()'
+        works. We will not explicitly call it here, because it is automatically ran, when the board is created.
+        '''
 
         # Verify
         random_cell = self.first_board.cells[1][2]
