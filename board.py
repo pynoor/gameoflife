@@ -97,7 +97,6 @@ class Board:
                 cell.update_state()
 
     def generate_new_board(self):
-        self.set_neighbours()
         self.set_new_states()
         new_board = []
         for cell_row in self.cells:
